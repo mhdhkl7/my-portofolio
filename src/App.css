@@ -249,3 +249,58 @@ body {
   border-top: 1px solid var(--border-color);
   font-size: 0.9rem;
 }
+
+/* ======================================================= */
+/* ===         RESPONSIVE MEDIA QUERIES          === */
+/* ======================================================= */
+
+/* --- Untuk Tablet (Lebar layar maks 768px) --- */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Ubah grid jadi 1 kolom */
+  }
+
+  .home-title {
+    font-size: 2.5rem; /* Perkecil ukuran judul utama */
+  }
+
+  .skills-title,
+  .contact-title {
+    font-size: 2rem; /* Perkecil judul section */
+  }
+
+  .header-nav a {
+    margin-left: 15px; /* Kurangi jarak antar menu */
+    font-size: 1rem;
+  }
+}
+
+
+/* --- Untuk HP (Lebar layar maks 480px) --- */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column; /* Ubah header jadi vertikal */
+    gap: 1rem;
+  }
+
+  .home-profile-pic {
+    width: 150px; /* Perkecil foto profil */
+    height: 150px;
+  }
+
+  .home-title {
+    font-size: 2rem; /* Perkecil lagi judul utama */
+  }
+  
+  .dynamic-text {
+    min-width: auto; /* Hapus lebar minimum teks dinamis */
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    gap: 1.5rem; /* Kurangi jarak antar kartu */
+  }
+}
