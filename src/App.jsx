@@ -1,6 +1,7 @@
 // src/App.jsx
 
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react'; // <-- 1. Impor Analytics (gunakan '/react')
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -17,9 +18,7 @@ function App() {
   };
 
   return (
-    // Gunakan React Fragment (<>...</>) untuk membungkus dua elemen sejajar
     <>
-      {/* Logo sekarang berada di luar .app, sejajar dengannya */}
       <img src={reactLogo} className="background-logo" alt="React Logo" />
 
       <div className={`app ${theme}`}>
@@ -31,6 +30,8 @@ function App() {
         </main>
         <Footer />
       </div>
+      
+      <Analytics /> {/* <-- 2. Tambahkan komponen ini di akhir */}
     </>
   );
 }
