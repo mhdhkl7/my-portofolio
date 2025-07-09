@@ -1,8 +1,6 @@
 /* App.css */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap");
 
-/* ... (seluruh variabel warna dark & light mode anda tetap di sini) ... */
-
 /* === DARK MODE (DEFAULT) === */
 :root {
   --background-color: #0d1117;
@@ -32,8 +30,9 @@ body.light-mode {
   --border-color: #e1e4e8;
 }
 
-
+/* --- Global Styles --- */
 body {
+  margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-body);
@@ -63,10 +62,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
-  flex-grow: 1; /* Memastikan main content mengisi ruang */
 }
-
-/* ... sisa kode css anda dari sini ke bawah tetap sama persis ... */
 
 .theme-toggle {
   background: none;
@@ -81,6 +77,7 @@ body {
 .theme-toggle:hover {
   background-color: var(--highlight-color);
   color: var(--primary-color);
+  opacity: 0.8;
 }
 
 .header {
@@ -152,17 +149,26 @@ body {
   color: var(--header-text-color);
   margin-bottom: 3rem;
 }
+
+/* === PERBAIKAN DI SINI === */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 2.5rem; /* Sedikit perlebar jarak antar kartu */
   text-align: left;
+  max-width: 900px; /* Batasi lebar grid agar tidak terlalu ke tepi */
+  margin: 0 auto; /* Buat grid menjadi di tengah section */
 }
+
 .skill-category {
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
   padding: 1.5rem;
   border-radius: var(--border-radius);
+  transition: transform 0.2s ease-in-out;
+}
+.skill-category:hover {
+    transform: translateY(-5px); /* Efek mengangkat saat di-hover */
 }
 .skill-category h3 {
   font-family: var(--font-heading);
@@ -231,17 +237,18 @@ body {
 }
 .btn-submit:hover {
   background-color: var(--secondary-highlight);
+  opacity: 0.8;
 }
-.social-links {
-  margin-top: 2rem;
-}
+
 .social-links a {
   margin: 0 15px;
   color: var(--highlight-color);
   font-size: 2rem;
+  transition: opacity 0.2s ease-in-out;
 }
-
-/* Tambahkan ini di bagian paling bawah App.css */
+.social-links a:hover {
+    opacity: 0.7;
+}
 
 .footer {
   text-align: center;
@@ -250,57 +257,43 @@ body {
   font-size: 0.9rem;
 }
 
-/* ======================================================= */
-/* ===         RESPONSIVE MEDIA QUERIES          === */
-/* ======================================================= */
-
-/* --- Untuk Tablet (Lebar layar maks 768px) --- */
+/* === MEDIA QUERIES === */
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: 1fr; /* Ubah grid jadi 1 kolom */
+    grid-template-columns: 1fr;
   }
-
   .home-title {
-    font-size: 2.5rem; /* Perkecil ukuran judul utama */
+    font-size: 2.5rem;
   }
-
   .skills-title,
   .contact-title {
-    font-size: 2rem; /* Perkecil judul section */
+    font-size: 2rem;
   }
-
   .header-nav a {
-    margin-left: 15px; /* Kurangi jarak antar menu */
+    margin-left: 15px;
     font-size: 1rem;
   }
 }
 
-
-/* --- Untuk HP (Lebar layar maks 480px) --- */
 @media (max-width: 480px) {
   .header {
-    flex-direction: column; /* Ubah header jadi vertikal */
+    flex-direction: column;
     gap: 1rem;
   }
-
   .home-profile-pic {
-    width: 150px; /* Perkecil foto profil */
+    width: 150px;
     height: 150px;
   }
-
   .home-title {
-    font-size: 2rem; /* Perkecil lagi judul utama */
+    font-size: 2rem;
   }
-  
   .dynamic-text {
-    min-width: auto; /* Hapus lebar minimum teks dinamis */
+    min-width: auto;
   }
-
   .home-subtitle {
     font-size: 1rem;
   }
-
   .skills-grid {
-    gap: 1.5rem; /* Kurangi jarak antar kartu */
+    gap: 1.5rem;
   }
 }
