@@ -1,37 +1,44 @@
-// src/App.jsx
-
-import React, { useState } from 'react';
-import { Analytics } from '@vercel/analytics/react'; // <-- 1. Impor Analytics (gunakan '/react')
+import React, { useState, useEffect } from 'react';
 import './App.css';
+
+import reactLogo from './assets/react.svg'; 
+
+// Impor semua komponen termasuk Footer
 import Header from './components/Header';
 import Home from './components/Home';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
-import reactLogo from './assets/react.svg';
+import Footer from './components/Footer'; // <-- Footer sudah diimpor
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('dark-mode');
 
   const toggleTheme = () => {
-    setTheme(currentTheme => (currentTheme === 'dark' ? 'light' : 'dark'));
+    setTheme((prevTheme) => (prevTheme === 'dark-mode' ? 'light-mode' : 'dark-mode'));
   };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
     <>
-      <img src={reactLogo} className="background-logo" alt="React Logo" />
+      <div 
+        className="background-logo"
+        style={{ backgroundImage: `url(${reactLogo})` }}
+      ></div>
 
-      <div className={`app ${theme}`}>
-        <Header toggleTheme={toggleTheme} currentTheme={theme} />
-        <main>
-          <Home />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <Header currentTheme={theme} toggleTheme={toggleTheme} />
       
-      <Analytics /> {/* <-- 2. Tambahkan komponen ini di akhir */}
+      <main className="container">
+        <Home />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+
+      <Footer /> {/* <-- Footer sudah ditampilkan di sini */}
     </>
   );
 }

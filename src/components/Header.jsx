@@ -1,23 +1,21 @@
-// src/components/Header.jsx
 import React from 'react';
-import { FaMoon, FaSun } from 'react-icons/fa'; // Impor ikon bulan dan matahari
+import { FaSun, FaMoon } from 'react-icons/fa';
 
-// Terima props toggleTheme dan currentTheme
-function Header({ toggleTheme, currentTheme }) { 
+const Header = ({ currentTheme, toggleTheme }) => {
   return (
-    <header className="header">
-      <div className="logo">Muhammad Haikal Siregar</div>
-      <nav className="navigation">
+    <header className="header container">
+      <div className="header-logo">Muhammad Haikal Siregar</div>
+      <nav className="header-nav">
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-        {/* Tombol untuk mengganti tema */}
-        <button onClick={toggleTheme} className="theme-toggle-button">
-          {currentTheme === 'dark' ? <FaSun /> : <FaMoon />}
+        <button onClick={toggleTheme} className="theme-toggle">
+          {currentTheme === 'dark-mode' ? <FaSun /> : <FaMoon />}
         </button>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

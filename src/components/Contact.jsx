@@ -1,47 +1,43 @@
-// src/components/Contact.jsx
 import React from 'react';
-// Impor ikon dari Font Awesome
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
-function Contact() {
+const Contact = () => {
   return (
-    <section id="contact" className="contact">
-      <h2>Hubungi Saya</h2>
-      <p>
-        Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar menyapa.
-        Jangan ragu untuk menghubungi saya melalui platform di bawah ini.
+    <section id="contact" className="contact-section">
+      <h2 className="contact-title">Hubungi Saya</h2>
+      <p className="contact-intro">
+        Tertarik untuk berkolaborasi atau punya pertanyaan? Jangan ragu untuk mengirim pesan.
       </p>
-      <div className="contact-links">
-        {/* Link GitHub dengan Ikon */}
-        <a
-          href="https://github.com/mhdhkl7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-icon" // Kita gunakan class baru untuk styling
-        >
-          <FaGithub size={40} />
-        </a>
-        
-        {/* Link LinkedIn dengan Ikon */}
-        <a
-          href="https://www.linkedin.com/in/haikal-siregar-aab406326/" // <-- Ganti dengan username LinkedIn Anda
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-icon"
-        >
-          <FaLinkedin size={40} />
-        </a>
 
-        {/* Link Email dengan Ikon */}
-        <a 
-          href="mailto:haikalsiregar427@gmail.com" // <-- Ganti dengan email Anda
-          className="contact-icon"
-        >
-          <FaEnvelope size={40} />
-        </a>
+      <p>Email: <a href="mailto:haikalsiregar427@gmail.com">haikalsiregar427@gmail.com</a></p>
+
+      <form
+        className="contact-form"
+        action="https://formspree.io/f/xldnyyzg" // ID Formspree Anda sudah benar
+        method="POST"
+      >
+        <div className="form-group">
+          <label htmlFor="name">Nama</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Pesan</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" className="btn-submit">Kirim</button>
+      </form>
+
+      <div className="social-links">
+        <a href="https://github.com/mhdhkl7" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+        <a href="https://www.instagram.com/mhdhkl07" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+        <a href="https://www.linkedin.com/in/haikal-siregar-aab406326/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
       </div>
     </section>
   );
-}
+};
 
 export default Contact;

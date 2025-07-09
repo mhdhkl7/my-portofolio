@@ -1,12 +1,11 @@
-// src/components/Footer.jsx
 import React from 'react';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2025 Muhammad Haikal Siregar. Dibuat dengan React & Vite.</p>
+      <p>&copy; {new Date().getFullYear()} Muhammad Haikal Siregar. All Rights Reserved.</p>
     </footer>
   );
-}
+};
 
 export default Footer;
