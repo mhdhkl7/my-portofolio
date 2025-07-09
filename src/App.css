@@ -1,0 +1,245 @@
+/* src/App.css FINAL */
+
+/* === Gaya Global & Variabel Tema === */
+:root {
+  --primary-color: #61dafb;
+  --background-color: #20232a;
+  --card-background: #282c34;
+  --text-color: #ffffff;
+  --header-background: #1a1c22;
+  --text-secondary: #aaaaaa;
+}
+
+.app.light {
+  --primary-color: #007acc;
+  --background-color: #f0f2f5;
+  --card-background: #ffffff;
+  --text-color: #20232a;
+  --header-background: #ffffff;
+  --text-secondary: #555555;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 { color: var(--text-color); }
+p { color: var(--text-secondary); }
+a { text-decoration: none; }
+
+/* === App Container === */
+.app {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+main { padding: 0 5%; }
+
+/* === Header === */
+.header {
+  background-color: var(--header-background);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.navigation a {
+  color: var(--text-color);
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover { color: var(--primary-color); }
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* === Hero Section (Home) === */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.hero-text {
+  max-width: 50%;
+  text-align: left;
+}
+
+.hero-text h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero-text p { font-size: 1.2rem; line-height: 1.6; }
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover { transform: translateY(-3px); }
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* === Projects Section === */
+.projects { padding: 4rem 0; }
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img { width: 100%; height: 200px; object-fit: cover; }
+.project-card h3, .project-card p, .project-card a { padding: 0 1rem; }
+.project-card h3 { margin-top: 1rem; }
+
+.project-card a {
+  display: inline-block;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* === Contact Section === */
+.contact {
+  background-color: var(--card-background);
+  padding: 4rem 5%;
+  margin-top: 4rem;
+  transition: background-color 0.3s;
+}
+
+.contact h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  color: var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: var(--primary-color);
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* === Footer === */
+.footer {
+  background-color: var(--header-background);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  transition: background-color 0.3s;
+}
+
+/* === Animation Utility === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* === Background Logo Animation === */
+.background-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vw;
+  opacity: 0.05;
+  z-index: 0; /* Diubah jadi 0 */
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* === Mobile Responsiveness === */
+@media (max-width: 768px) {
+  .header { flex-direction: column; padding: 1rem; gap: 1rem; }
+  .navigation a { margin: 0 0.5rem; }
+  .hero { flex-direction: column-reverse; min-height: auto; padding: 2rem 0; }
+  .hero-text, .hero-image { max-width: 90%; text-align: center; }
+  .hero-text h1 { font-size: 2.5rem; }
+  .hero-image img { width: 200px; height: 200px; margin-bottom: 1rem; }
+  .projects h2, .contact h2 { font-size: 2rem; }
+  .project-grid { grid-template-columns: 1fr; }
+  .contact-links { gap: 1.5rem; }
+  .background-logo { width: 100vw; height: 100vw; }
+}
