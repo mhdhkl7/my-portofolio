@@ -24,7 +24,7 @@ function Contact() {
         
         {/* Link LinkedIn dengan Ikon */}
         <a
-          href="https://linkedin.com/in/usernameanda" // <-- Ganti dengan username LinkedIn Anda
+          href="https://www.linkedin.com/in/haikal-siregar-aab406326/" // <-- Ganti dengan username LinkedIn Anda
           target="_blank"
           rel="noopener noreferrer"
           className="contact-icon"
@@ -34,7 +34,7 @@ function Contact() {
 
         {/* Link Email dengan Ikon */}
         <a 
-          href="mailto:emailanda@example.com" // <-- Ganti dengan email Anda
+          href="mailto:haikalsiregar427@gmail.com" // <-- Ganti dengan email Anda
           className="contact-icon"
         >
           <FaEnvelope size={40} />
