@@ -297,3 +297,25 @@ body {
     gap: 1.5rem;
   }
 }
+
+/* Tambahkan ini di paling bawah App.css, sebelum @media queries */
+
+.about-me-section {
+  max-width: 700px; /* Batasi lebar teks agar mudah dibaca */
+  margin: 4rem auto 0 auto; /* Beri jarak dari atas dan pusatkan */
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.about-me-section h2 {
+  font-family: var(--font-heading);
+  color: var(--header-text-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-me-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}

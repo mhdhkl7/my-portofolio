@@ -29,6 +29,14 @@ const Home = () => {
         <p className="home-subtitle">
           Selamat datang di portofolio digital saya. Saya bersemangat dalam menciptakan aplikasi web yang fungsional, modern, dan bermanfaat.
         </p>
+
+        {/* BAGIAN TENTANG SAYA DITAMBAHKAN DI SINI */}
+        <div className="about-me-section">
+          <h2>Tentang Saya</h2>
+          <p>
+            Sebagai seorang mahasiswa Informatika yang antusias, saya memiliki hasrat mendalam untuk memecahkan masalah melalui kode. Saya menikmati proses belajar teknologi baru dan menerapkannya untuk membangun aplikasi yang tidak hanya terlihat bagus, tetapi juga berjalan dengan efisien dan memberikan pengalaman pengguna yang intuitif.
+          </p>
+        </div>
       </div>
     </section>
   );
