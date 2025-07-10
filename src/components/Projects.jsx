@@ -12,7 +12,7 @@ const Projects = () => {
           <p>
             Sebuah website yang menampilkan daftar film. Dibuat menggunakan React dan menunjukkan pemahaman tentang state management dan API calls.
           </p>
-          <a href="https://github.com/mhdhkl7" target="_blank" rel="noopener noreferrer" className="btn-project">
+          <a href="https://github.com/mhdhkl7/Perancangan-Web/tree/main/Pertemuan%2010" target="_blank" rel="noopener noreferrer" className="btn-project">
             Lihat di GitHub
           </a>
         </div>
@@ -24,7 +24,7 @@ const Projects = () => {
           <p>
             Platform untuk manajemen dan peminjaman buku perpustakaan secara digital, dibangun dengan arsitektur komponen yang solid.
           </p>
-          <a href="https://github.com/mhdhkl7" target="_blank" rel="noopener noreferrer" className="btn-project">
+          <a href="https://github.com/mhdhkl7/Perancangan-Web/tree/main/Pertemuan%2012" target="_blank" rel="noopener noreferrer" className="btn-project">
             Lihat di GitHub
           </a>
         </div>
