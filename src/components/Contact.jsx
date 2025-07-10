@@ -10,6 +10,8 @@ const Contact = () => {
       </p>
 
       <p>Email: <a href="mailto:haikalsiregar427@gmail.com">haikalsiregar427@gmail.com</a></p>
+      <p>Telepon: +62 851-5760-0402</p>
+      <p>Lokasi: Medan, Sumatera Utara, Indonesia</p>
 
       <form
         className="contact-form"
