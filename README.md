@@ -1,12 +1,49 @@
-# React + Vite
+# Web Portofolio Pribadi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ini adalah proyek website portofolio yang saya buat sebagai tugas Ujian Akhir Semester (UAS) untuk mata kuliah **Perancangan Web** di semester 2.
 
-Currently, two official plugins are available:
+Website ini dibangun menggunakan ReactJS dan Vite, dan isinya adalah perkenalan diri saya, beberapa proyek tugas kuliah yang pernah saya buat, serta keahlian yang sedang saya pelajari.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live Demo bisa diakses di sini:**
+**https://portofolio-haikalsrg.vercel.app/**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Tampilan Proyek
+
+![Tampilan Homepage](public/images/project2.png)
+![Tampilan Proyek Lain](public/images/project1.png)
+
+### Teknologi yang Digunakan
+
+* **Framework:** ReactJS + Vite
+* **Bahasa:** JavaScript, HTML, CSS
+* **Styling:** CSS Murni dengan CSS Variables & Media Queries untuk tampilan responsif.
+* **Fitur Tambahan:**
+    * **React Icons:** Untuk ikon-ikon di website.
+    * **Formspree:** Untuk membuat formulir kontak berfungsi.
+* **Hosting:** Vercel
+
+### Cara Menjalankan Proyek Secara Lokal
+
+1.  **Clone repository ini:**
+    ```bash
+    git clone [https://github.com/mhdhkl7/my-portofolio.git](https://github.com/mhdhkl7/my-portofolio.git)
+    ```
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd my-portofolio
+    ```
+3.  **Install semua dependency yang dibutuhkan:**
+    ```bash
+    npm install
+    ```
+4.  **Jalankan development server:**
+    ```bash
+    npm run dev
+    ```
+5.  Buka browser dan akses `http://localhost:5173` (atau alamat lain yang muncul di terminal).
+
+---
+
+Terima kasih sudah berkunjung!
